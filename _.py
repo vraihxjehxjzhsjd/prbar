@@ -1,7 +1,9 @@
 from alive_progress import alive_bar
+from time import sleep
 
-with alive_bar(20, bar='classic', title='Тест', length=20) as bar:
+with alive_bar(20, title='Тест') as bar:
     count = range(1, 21)
     for count in count:
-        print(f"[{count}] sended.")
         bar()
+        print(f"[{count}] sended.")
+        sleep(.5)
